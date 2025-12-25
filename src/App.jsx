@@ -10,7 +10,7 @@ const App = () => {
     <>
     <div >
       <Homepage />
-      {/* <Skills /> */}
+      <Skills />
       {/* <Project /> */}
       {/* <Certification /> */}
       <Contactme />

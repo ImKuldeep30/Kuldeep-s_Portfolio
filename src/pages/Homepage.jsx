@@ -8,7 +8,7 @@ const Homepage = () => {
     <section id='home'>
     <div className="w-full min-h-screen bg-[#151618]">
         <Nav />
-        <div className=''>
+        <div >
             <Main />
         </div>
     </div>

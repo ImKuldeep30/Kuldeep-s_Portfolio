@@ -74,22 +74,16 @@ const Skills = () => {
   return (
     <>
     <section id='skills'>
-    <div className="w-full min-h-screen bg-[#151618]">
-        <div className='h-10 w-full'></div>
-        <span className='inline-block w-full px-[20%] text-white font-semibold text-4xl'>TECH STACK</span>
-        <div className='py-8 mx-auto w-[90%] px-[10%]'>
-          <Stack item='FRONTEND' data={frontarr}/>
-          <Stack item='BACKEND' data={backarr}/>
-          <Stack item='DATABASE' data={dbarr}/>
-          <Stack item='TOOLS' data={toolsarr}/>
+    <div className="w-full lg:h-screen sm:min-h-screen bg-[#151618]">
+        <div className='pt-[15%] lg:pt-[6%]'>
+          <span className='inline-block w-full px-[20%] text-white font-semibold text-4xl'>TECH STACK</span>
+          <div className='py-8 mx-auto w-[90%] px-[10%]'>
+            <Stack item='FRONTEND' data={frontarr}/>
+            <Stack item='BACKEND' data={backarr}/>
+            <Stack item='DATABASE' data={dbarr}/>
+            <Stack item='TOOLS' data={toolsarr}/>
+          </div>
         </div>
-        
-        {/* <div>soft skills
-            Problem Solving
-            Team Collaboration
-            Time Management
-            Adaptability
-        </div> */}
     </div>
     </section>
     </>
