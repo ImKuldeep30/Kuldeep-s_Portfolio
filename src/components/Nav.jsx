@@ -42,11 +42,11 @@ const Nav = () => {
 
       {open && (
         <div className="absolute top-20 left-0 w-full h-screen text-2xl bg-black/95 backdrop-blur-lg flex flex-col items-center gap-6 py-20 lg:hidden z-50">
-          <a className='' href="#home" onClick={() => setOpen(false)}>HOME</a>
-          <a href="#skills" onClick={() => setOpen(false)}>SKILLS</a>
-          <a href="#project" onClick={() => setOpen(false)}>PROJECT</a>
-          <a href="#certification" onClick={() => setOpen(false)}>CERTIFICATION</a>
-          <a href="#contact" onClick={() => setOpen(false)}>CONTACT ME</a>
+          <a className='' href="#home" onClick={() => setOpen(false)}>Home</a>
+          <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
+          <a href="#project" onClick={() => setOpen(false)}>Project</a>
+          <a href="#certification" onClick={() => setOpen(false)}>Certifications</a>
+          <a href="#contact" onClick={() => setOpen(false)}>Contact me</a>
           <h1 className='text-xl mt-[20%]'>GET IN TOUCH</h1>
           <Email />
         </div>

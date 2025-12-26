@@ -6,7 +6,7 @@ import Email from './Email'
 
 const Info = () => {
   return (
-    <div className='flex flex-col md:flex-row md:justify-between'>
+    <div className='flex flex-col md:flex-row md:justify-between px-[20%]'>
         <div>
           <Email />
           <h1 className='text-xl grid'>Location <span>Dehradun, Uttrakhand, India</span></h1>
