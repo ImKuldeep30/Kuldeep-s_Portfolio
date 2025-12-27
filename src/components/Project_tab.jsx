@@ -32,8 +32,8 @@ const Project_tab = () => {
 
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
-      {data.map((items, index) =>(
-        <Project_card value={items}/>
+      {data.map((items, indx) =>(
+        <Project_card key={indx} value={items}/>
       ))}
     </div>
   )

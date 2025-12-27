@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Certificate_card = (props ,key) => {
-    console.log(props.value.image)
+    
   return (
     <div className='bg-white/20 text-white border-white rounded-lg h-full p-6'>
         <h1 className='text-xl font-semibold text-center pb-4 '>{props.value.name}</h1>

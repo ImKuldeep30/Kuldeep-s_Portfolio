@@ -8,7 +8,7 @@ const Project_card = (props) => {
         <p className='text-center text-white/80 mb-4'>{props.value.context}</p>
         <div className='mb-4 flex flex-wrap gap-2'>
             {props.value.tech.map((item,key)=>(
-                <Lib_used data={item}/>
+                <Lib_used key={key} data={item}/>
             ))}
         </div>
         <a href={props.value.link} className='inline-block bg-black/30 px-5 py-2 text-sm rounded-xl'>View Project</a>
