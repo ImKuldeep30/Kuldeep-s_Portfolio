@@ -75,9 +75,9 @@ const Skills = () => {
     <>
     <section id='skills'>
     <div className="w-full lg:h-screen sm:min-h-screen bg-[#151618]">
-        <div className='pt-[15%] lg:pt-[6%]'>
-          <span className='inline-block w-full text-center text-white font-semibold text-4xl'>TECH STACK</span>
-          <div className='py-8 mx-auto w-[90%] px-[10%]'>
+        <div className='pt-24 lg:pt-16'>
+          <span className='inline-block w-full text-center text-white font-semibold text-2xl sm:text-4xl'>TECH STACK</span>
+          <div className='py-8 mx-auto w-full max-w-5xl px-4 sm:px-8 lg:px-20'>
             <Stack item='FRONTEND' data={frontarr}/>
             <Stack item='BACKEND' data={backarr}/>
             <Stack item='DATABASE' data={dbarr}/>

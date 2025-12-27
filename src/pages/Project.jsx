@@ -5,9 +5,9 @@ const Project = () => {
     <>
     <section id='project'> 
       <div className="w-full min-h-screen bg-[#151618] flex justify-center">
-        <div className=' min-h-screen  w-[90%]'>
-          <div className='py-[15%] md:py-[10%] lg:py-[6%]'>
-            <span className='text-white text-4xl font-semibold text-center inline-block w-full' >PROJECTS</span>
+        <div className='w-full max-w-5xl mx-auto px-4 sm:px-8'>
+          <div className='py-20 md:py-16 lg:py-12'>
+            <span className='text-white text-2xl sm:text-4xl font-semibold text-center inline-block w-full'>PROJECTS</span>
           </div>
           <Project_tab />
         </div>
