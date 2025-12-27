@@ -8,11 +8,8 @@ const About = () => {
     <div className="w-full min-h-screen bg-[#151618] flex justify-center text-white px-4 sm:px-8 lg:px-20 py-12 lg:py-12">
       <div className="w-full max-w-5xl py-8 lg:py-12">
         <h1 className="font-semibold text-center text-2xl sm:text-3xl lg:text-4xl mb-4">
-          CONTACT
+          CONTACT ME
         </h1>
-        <span className="block text-center text-base sm:text-lg lg:text-xl mb-6">
-          Connect with me
-        </span>
         <p className="text-center text-sm sm:text-base lg:text-xl leading-relaxed px-4 sm:px-8 lg:px-0">
           Feel free to reach out to me for any inquiries, collaborations, or professional opportunities.
           I am always open to meaningful discussions around new projects, innovative ideas, and potential partnerships.
