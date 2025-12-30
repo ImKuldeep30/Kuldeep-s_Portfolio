@@ -74,7 +74,7 @@ const Skills = () => {
   return (
     <>
     <section id='skills'>
-    <div className="w-full lg:h-screen sm:min-h-screen bg-[#151618]">
+    <div className="w-full lg:h-screen sm:min-h-screen ">
         <div className='pt-24 lg:pt-16'>
           <span className='inline-block w-full text-center text-white font-semibold text-2xl sm:text-4xl'>TECH STACK</span>
           <div className='py-8 mx-auto w-full max-w-5xl px-4 sm:px-8 lg:px-20'>

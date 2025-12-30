@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 const About = () => {
   return (
     <section id="contact">
-    <div className="w-full min-h-screen bg-[#151618] flex justify-center text-white px-4 sm:px-8 lg:px-20 py-12 lg:py-12">
+    <div className="w-full min-h-screen flex justify-center text-white px-4 sm:px-8 lg:px-20 py-12 lg:py-12">
       <div className="w-full max-w-5xl py-8 lg:py-12">
         <h1 className="font-semibold text-center text-2xl sm:text-3xl lg:text-4xl mb-4">
           CONTACT ME

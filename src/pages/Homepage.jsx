@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <>
     <section id='home'>
-    <div className="w-full min-h-screen bg-black">
+    <div className="w-full min-h-screen">
         <Nav />
         <div >
           <Main />
