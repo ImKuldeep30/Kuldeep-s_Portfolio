@@ -1,54 +1,61 @@
-import React, { useRef } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 
 const Loader = ({ onFinish }) => {
   const loaderRef = useRef(null)
-  const wordRef = useRef(null)
-  const charsRef = useRef([])
+  const counterRef = useRef(null)
+  const [count, setCount] = useState(0)
 
-  const text = "KULDEEP KOHLI"
+  useEffect(() => {
+    // Counter animation logic
+    const duration = 2000 // 2 seconds
+    const intervalTime = 20
+    const steps = duration / intervalTime
+    const increment = 100 / steps
+
+    const timer = setInterval(() => {
+      setCount((prev) => {
+        const next = prev + increment
+        if (next >= 100) {
+          clearInterval(timer)
+          return 100
+        }
+        return next
+      })
+    }, intervalTime)
+
+    return () => clearInterval(timer)
+  }, [])
 
   useGSAP(() => {
     const tl = gsap.timeline({
       onComplete: onFinish
     })
 
-    // 1️⃣ Letters come from bottom one by one
-    tl.from(charsRef.current, {
-      y: -100,
-      opacity: 0,
-      duration: 0.3,
-      stagger: 0.04,
-      ease: "power3.out"
+    // Wait until counter finishes (approx 2.2s including delay/easing)
+    // We synchronize roughly with the React state update or forced delay
+    
+    tl.to(".counter-text", {
+        opacity: 0,
+        delay: 2.2, // Wait for count to reach 100
+        duration: 0.5
     })
 
-    // 2️⃣ Whole word zooms + fades (NOT individual letters)
-    tl.to(wordRef.current, {
-      scale: 2,
-      opacity: 0,
-      duration: 1,
-      delay: 0.3,
-      ease: "power3.inOut"
-    })
-
-    // 3️⃣ Loader fades out
+    // Curtain Reveal
     tl.to(loaderRef.current, {
-      autoAlpha:0,
-      duration: 0.5
+      yPercent: -100,
+      duration: 1.2,
+      ease: "power4.inOut"
     })
 
   }, [])
 
   return (
-    <div ref={loaderRef} className="fixed inset-0 bg-black flex items-center justify-center z-9999">
-      <h1 ref={wordRef} className="flex flex-wrap justify-center text-purple-700 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-widest sm:tracking-widest">
-        {text.split("").map((char, index) => (
-          <span key={index} ref={el => (charsRef.current[index] = el)} className="inline-block">
-            {char === " " ? "\u00A0" : char}
-          </span>
-        ))}
-      </h1>
+    <div ref={loaderRef} className="fixed inset-0 bg-black flex flex-col items-center justify-center z-50">
+      <div className="counter-text text-white font-bold text-6xl sm:text-8xl md:text-9xl tracking-tighter tabular-nums selection:bg-purple-500 selection:text-white">
+        {Math.round(count)}%
+      </div>
     </div>
   )
 }

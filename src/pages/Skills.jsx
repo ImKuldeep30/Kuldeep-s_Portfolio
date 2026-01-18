@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import Stack from '../components/Stack'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Skills = () => {
+    const containerRef = useRef(null)
+
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".skill-card", {
+                scrollTrigger: {
+                    trigger: "#skills",
+                    start: "top 75%", // slightly earlier
+                    end: "bottom bottom",
+                    toggleActions: "play none none reverse"
+                },
+                y: 50, // Reduced from 100 to make it more subtle
+                opacity: 0,
+                duration: 1,
+                stagger: 0.2,
+                ease: "power3.out"
+            })
+        }, containerRef)
+
+        return () => ctx.revert()
+    }, [])
 
     const frontarr = [
         {
@@ -73,15 +96,17 @@ const Skills = () => {
 
   return (
     <>
-    <section id='skills'>
+    <section id='skills' ref={containerRef} className="relative z-10">
     <div className="w-full lg:h-screen sm:min-h-screen ">
         <div className='pt-24 lg:pt-16'>
-          <span className='inline-block w-full text-center text-white font-semibold text-2xl sm:text-4xl'>TECH STACK</span>
+           <div className='overflow-hidden'>
+             <span className='skill-card inline-block w-full text-center text-white font-semibold text-2xl sm:text-4xl'>TECH STACK</span>
+           </div>
           <div className='py-8 mx-auto w-full max-w-5xl px-4 sm:px-8 lg:px-20'>
-            <Stack item='FRONTEND' data={frontarr}/>
-            <Stack item='BACKEND' data={backarr}/>
-            <Stack item='DATABASE' data={dbarr}/>
-            <Stack item='TOOLS' data={toolsarr}/>
+            <div className='skill-card'><Stack item='FRONTEND' data={frontarr} dir='left'/></div>
+            <div className='skill-card'><Stack item='BACKEND' data={backarr} dir='right'/></div>
+            <div className='skill-card'><Stack item='DATABASE' data={dbarr} dir='left'/></div>
+            <div className='skill-card'><Stack item='TOOLS' data={toolsarr} dir='right'/></div>
           </div>
         </div>
     </div>

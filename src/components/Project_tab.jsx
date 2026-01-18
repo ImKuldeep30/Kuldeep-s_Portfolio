@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import Project_card from './Project_card'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Project_tab = () => {
+  const containerRef = useRef(null)
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".project-card-wrapper", {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse"
+        },
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out"
+      })
+    }, containerRef)
+    return () => ctx.revert()
+  }, [])
 
   const data = [
     {
@@ -31,9 +53,11 @@ const Project_tab = () => {
   ]
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
+    <div ref={containerRef} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
       {data.map((items, indx) =>(
-        <Project_card key={indx} value={items}/>
+        <div key={indx} className='project-card-wrapper h-full'>
+            <Project_card value={items}/>
+        </div>
       ))}
     </div>
   )
