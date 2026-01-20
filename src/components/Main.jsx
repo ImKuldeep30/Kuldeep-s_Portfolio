@@ -30,15 +30,14 @@ const Main = () => {
             ease: "power3.out"
         }, "-=0.8")
 
-        // Parallax & Fade Effect
         gsap.to(".main-content", {
             yPercent: 50,
-            opacity: 0, // Fade out
+            opacity: 0, 
             ease: "none",
             scrollTrigger: {
                 trigger: containerRef.current,
                 start: "top top",
-                end: "bottom center", // Fade out halfway through
+                end: "bottom center",
                 scrub: true
             }
         })

@@ -29,7 +29,6 @@ const App = () => {
       smoothWheel: true,
     })
 
-    // Synchronize Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update)
 
     gsap.ticker.add((time) => {
@@ -40,7 +39,6 @@ const App = () => {
 
     // Cursor Animation
     const moveCursor = (e) => {
-      // Small cursor
       gsap.to(cursorRef.current, {
         x: e.clientX - 10,
         y: e.clientY - 10,
