@@ -61,15 +61,15 @@ const Main = () => {
       <div className='main-content w-full flex flex-col items-center'>
         
         <div className="overflow-hidden mb-2">
-            <h1 id="CS" className='hero-text text-purple-700 text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight'>COMPUTER SCIENCE</h1>
+            <h1 id="CS" className='hero-text text-purple-700 text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight'>KULDEEP KOHLI</h1>
         </div>
         
         <div className="overflow-hidden mb-6">
-            <h1 id="eng" className='hero-text text-3xl sm:text-5xl lg:text-7xl text-white font-extrabold px-2 tracking-tight'>ENGINEER</h1>
+            <h1 id="eng" className='hero-text text-3xl sm:text-5xl lg:text-4xl text-white font-extrabold px-2 tracking-tight'>FULL STACK DEVELOPER</h1>
         </div>
 
-        <p id='para' className='text-base sm:text-lg lg:text-xl text-white/80 mt-2 leading-7 sm:leading-8 lg:leading-9 max-w-3xl'>Hi! I'm 
-          <span className='font-semibold text-purple-300'> Kuldeep Kohli</span>, a passionate computer science enthusiast with a strong interest in software development, artificial intelligence, and web technologies. Currently pursuing a BTech in Computer Science and Engineering, I am dedicated to building innovative solutions that address real-world problems.
+        <p id='para' className='text-base sm:text-lg lg:text-xl text-white/80 mt-2 leading-7 sm:leading-8 lg:leading-9 max-w-3xl'>I'm a passionate
+          <span className='font-semibold text-purple-300'> computer science</span> enthusiast with a strong interest in software development, artificial intelligence, and web technologies. Currently pursuing a BTech in Computer Science and Engineering, I am focused on building innovative and scalable solutions that solve real-world problems.
         </p>
         
         <div id="btn" className='mt-10'>
