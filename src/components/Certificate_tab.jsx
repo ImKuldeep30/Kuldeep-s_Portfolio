@@ -1,9 +1,9 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import Certificate_card from './Certificate_card'
-import cert1 from '../assets/Screenshot 2025-12-27 211219.png'
-import cert2 from '../assets/Screenshot 2025-12-27 211117.png'
-import cert3 from '../assets/Screenshot 2025-12-27 175218.png'
-import cert4 from '../assets/screenshot 2026-02-12 093301.png'
+import cert1 from '../assets/introtoIOT.png'
+import cert2 from '../assets/googlecloud.png'
+import cert3 from '../assets/database.png'
+import cert4 from '../assets/hackthewinter.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
