@@ -65,7 +65,7 @@ const App = () => {
           <Background />
 
           {/* Custom Cursor */}
-          <div ref={cursorRef} className="fixed top-0 left-0 h-6 w-6 bg-purple-400 mix-blend-difference rounded-full z-[9999] pointer-events-none hidden md:block"></div>
+          <div ref={cursorRef} className="fixed top-0 left-0 h-6 w-6 bg-purple-400 mix-blend-difference rounded-full z-9999 pointer-events-none hidden md:block"></div>
 
           <div className="relative z-10">
             <Homepage />

@@ -3,6 +3,7 @@ import Certificate_card from './Certificate_card'
 import cert1 from '../assets/Screenshot 2025-12-27 211219.png'
 import cert2 from '../assets/Screenshot 2025-12-27 211117.png'
 import cert3 from '../assets/Screenshot 2025-12-27 175218.png'
+import cert4 from '../assets/screenshot 2026-02-12 093301.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -41,9 +42,14 @@ const Certificate_tab = () => {
             link: 'https://drive.google.com/file/d/19pXjKsrm9PmswgqhYqADqZRyiKnEkJZV/view?usp=sharing'
         },
         {
-            name: 'Data base management system',
+            name: 'Database management system',
             image: cert3,
             link: 'https://drive.google.com/file/d/17Q_GZ7G0FdHaYFhC3MgOrsWeds6r4nqz/view?usp=sharing'
+        },
+        {
+            name: 'Hack the winter',
+            image: cert4,
+            link: 'https://drive.google.com/file/d/1_RusZGurguapB0U6l_Xq0IpZ6UZZ8lgN/view?usp=sharing'
         }
     ]
 

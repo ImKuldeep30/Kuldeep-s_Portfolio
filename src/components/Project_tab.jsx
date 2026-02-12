@@ -49,6 +49,12 @@ const Project_tab = () => {
       context:'AI Powered Process Scheduler is a web-based CPU scheduling simulator for FCFS, SJF, and Round Robin, featuring real-time execution, Gantt chart visualization, and AI-based algorithm recommendations.',
       tech:['Python','Flask','JavaScript','HTML','CSS'],
       link:'https://github.com/ImKuldeep30/AI-powered-process-scheduler.git'
+    },
+    {
+      topic:'AI Diabetes Diagnostic and consultation system',
+      context:'Developed a Dockerized AI health platform with React, FastAPI, Scikit-learn, and Gemini API for real-time diagnostics and personalized preventive care.',
+      tech:['Python','Flask','JavaScript','React','Tailwind'],
+      link:'https://github.com/ImKuldeep30/diabetes-3rd-sem.git'
     }
   ]
 
